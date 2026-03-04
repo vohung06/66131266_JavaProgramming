@@ -25,7 +25,7 @@ public class BaiTapVeNha1 {
 	    else 
 	            tienDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (soDien - 300) * 2834;
 	    System.out.printf("Tien dien phai tra: %d", tienDien);
-
+	    scanner.close();
 	}
 
 }
