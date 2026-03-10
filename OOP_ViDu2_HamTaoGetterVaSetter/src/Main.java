@@ -15,6 +15,9 @@ public class Main {
 		cn1_rong = cn1.getRong();
 		System.out.println("-> Sau khi thay doi chieu dai: ");
 		System.out.println("Hinh CN1 co chieu dai moi la " + cn1_dai + " va chieu rong la " + cn1_rong);
+		//Su dung toString
+		System.out.println("-> Su dung toString: ");
+		System.out.println(cn1.toString());
 		
 	}
 

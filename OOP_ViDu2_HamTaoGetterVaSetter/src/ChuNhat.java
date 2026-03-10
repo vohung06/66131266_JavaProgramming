@@ -25,4 +25,10 @@ public class ChuNhat {
 	void setRong(double rong) {
 		this.rong = rong;
 	}
+	//Cac phuong thuc khac
+	//Tom tat thong tin cua doi tuong thanh mot chuoi de in ra man hinh
+	public String toString() {
+		String s = "Hinh co chieu dai la " + dai + " va chieu rong la " + rong;
+		return s;
+	}
 }
