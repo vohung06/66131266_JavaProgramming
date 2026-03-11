@@ -25,7 +25,7 @@ public class Employee {
 	}
 	
 	public String getName() {
-		return first_name + last_name;
+		return first_name + " " + last_name;
 	}
 	
 	public int getSalary() {
@@ -45,7 +45,7 @@ public class Employee {
 	}
 	
 	public String toString() {
-		return "Employee [id = " + id + ", name = " + first_name + last_name + ", salary = " + salary + "]";
+		return "Nhan vien: [id = " + id + ", ho va ten = " + first_name + " " + last_name + ", luong = " + salary + "]";
 		
 	}
 }
