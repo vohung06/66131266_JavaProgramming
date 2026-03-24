@@ -4,6 +4,15 @@ public class HinhHoc {
 	private String ten;
 	private String mauSac;
 	
+	public HinhHoc() {
+		
+	}
+	
+	public HinhHoc(String ten, String mauSac) {
+		this.ten = ten;
+		this.mauSac = mauSac;
+	}
+	
 	public double tinhDienTich() {
 		return 0;
 	}
