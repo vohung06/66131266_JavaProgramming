@@ -10,7 +10,9 @@ public class Main {
 		System.out.print("\n");
 		xm1.hienThiThongTin();
 		
-
+		Oto ot1 = new Oto("Toyota", 2025, 400000000, 4, "dầu");
+		System.out.print("\n");
+		ot1.hienThiThongTin();
 	}
 
 }
