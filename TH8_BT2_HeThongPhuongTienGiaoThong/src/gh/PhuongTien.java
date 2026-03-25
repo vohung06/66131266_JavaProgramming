@@ -44,5 +44,7 @@ public class PhuongTien {
         System.out.println("Hãng sản xuất: " + hangSanXuat);
         System.out.println("Năm sản xuất: " + namSanXuat);
         System.out.println("Giá bán: " + giaBan);
+        System.out.println("Vận tốc tối đa: " + layVanTocToiDa());
+        System.out.println("Số chỗ ngồi: " + laySoChoNgoi());
     }
 }
