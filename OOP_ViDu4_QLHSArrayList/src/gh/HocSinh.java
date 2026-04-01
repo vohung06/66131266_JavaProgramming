@@ -39,7 +39,8 @@ public class HocSinh {
 	}
 	@Override
 	public String toString() {
-		return "HocSinh [tenHS=" + tenHS + ", tuoiHS=" + tuoiHS + ", lopHS=" + lopHS + "]";
+//		return "HocSinh [tenHS=" + tenHS + ", tuoiHS=" + tuoiHS + ", lopHS=" + lopHS + "]";
+		return "Họ và tên: " + tenHS + "\nTuổi: " + tuoiHS + "\nLớp: " + lopHS + "\n";
 	}
 	
 }
