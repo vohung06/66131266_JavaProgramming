@@ -1,3 +1,5 @@
+package gh;
+
 import java.io.*;
 
 public class ViDuBufferedReader {
