@@ -10,7 +10,12 @@ public class PhanSo {
 	
 	public PhanSo(int tu, int mau) {
 		this.tu = tu;
-		this.mau = mau;
+		if (mau == 0) {
+	        System.out.println("Mẫu số không hợp lệ! Tự động gán mẫu số bằng 1");
+	        this.mau = 1;
+	    } 
+		else
+			this.mau = mau;
 	}
 
 	public int getTu() {
@@ -26,6 +31,10 @@ public class PhanSo {
 	}
 
 	public void setMau(int mau) {
+		if (mau == 0) {
+	        System.out.println("Mẫu số không hợp lệ!");
+	        return;
+	    } 
 		this.mau = mau;
 	}
 	
@@ -58,12 +67,47 @@ public class PhanSo {
 		int temp = UCLN(tu, mau);
 		tu /= temp;
 		mau /= temp;
+		if (mau < 0) {
+	        tu = -tu;
+	        mau = -mau;
+	    }
 	}
 	
 	//Hàm cộng 2 phân số
 	public PhanSo cong2PS(PhanSo ps2) {
 		int tuMoi = this.tu * ps2.mau + ps2.tu * this.mau;
 		int mauMoi = this.mau * ps2.mau;
+		PhanSo ketQua = new PhanSo(tuMoi, mauMoi);
+		ketQua.rutGon();
+		return ketQua;
+	}
+	
+	//Hàm trừ 2 phân số
+	public PhanSo tru2PS(PhanSo ps2) {
+		int tuMoi = this.tu * ps2.mau - ps2.tu * this.mau;
+		int mauMoi = this.mau * ps2.mau;
+		PhanSo ketQua = new PhanSo(tuMoi, mauMoi);
+		ketQua.rutGon();
+		return ketQua;
+	}
+	
+	//Hàm nhân 2 phân số
+	public PhanSo nhan2PS(PhanSo ps2) {
+		int tuMoi = this.tu * ps2.tu;
+		int mauMoi = this.mau * ps2.mau;
+		PhanSo ketQua = new PhanSo(tuMoi, mauMoi);
+		ketQua.rutGon();
+		return ketQua;
+	}
+	
+	//Hàm chia 2 phân số
+	public PhanSo chia2PS(PhanSo ps2) {
+		if (ps2.tu == 0) {
+			System.out.println("Không thể chia");
+	        return null;
+	    }
+		int tuMoi = this.tu * ps2.mau;
+		int mauMoi = this.mau * ps2.tu;
 		PhanSo ketQua = new PhanSo(tuMoi, mauMoi);
 		ketQua.rutGon();
 		return ketQua;
