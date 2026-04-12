@@ -15,8 +15,14 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 4. Làm quen với cấu trúc tổ chức dự án và code.
 
 ## 🚀 Một số dự án tiêu biểu
-### 1. 
+### 1. OOP_ViDu4_QLHSArrayList
+[Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/OOP_ViDu4_QLHSArrayList)
 
+**Mô tả**: Dự án thực hiện chương trình quản lí danh sách học sinh bằng ArrayList các đối tượng thuộc lớp HocSinh. Cho phép người dùng tạo danh sách học sinh, thêm học sinh mới và xoá học sinh.
+
+**Lớp chính**: ```HocSinh```, ```Main```.
+
+**Trọng tâm kiến thức**: OOP, ArrayList.
 
 ### 2.
 
