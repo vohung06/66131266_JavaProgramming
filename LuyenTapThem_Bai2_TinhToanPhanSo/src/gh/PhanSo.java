@@ -36,12 +36,12 @@ public class PhanSo {
 
 	@Override
 	public String toString() {
-		return "Phân số; " + tu + "/" + mau;
+		return "Phân số: " + tu + "/" + mau;
 	}
 	
 	//Hàm tìm UCLN của tử và mẫu
 	public int UCLN(int a, int b) {
-		while (mau != 0) {
+		while (b != 0) {
 			int r = a % b;
 			a = b;
 			b = r;
