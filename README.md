@@ -30,6 +30,7 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 **Mô tả**: Xây dựng lớp ```PhanSo``` để biểu diễn phân số và xử lý các trường hợp đặc biệt. Cho phép người dùng nhập và thực hiện các thao tác tính toán cơ bản trên phân số.
 
 **Lớp chính**: ```PhanSo```, ```Main```.
+
 **Trọng tâm kiến thức**: OOP.
 
 ![ảnh 1](ImageProject/TinhToanPhanSo1.jpg)
