@@ -8,7 +8,10 @@ public class Main {
 		System.out.println(ps1.getGiaTriPhanSo());
 		ps1.rutGon();
 		System.out.println(ps1);
-
+		
+		PhanSo ps2 = new PhanSo(1, 2);
+		System.out.println(ps1.cong2PS(ps2));
+		
 	}
 
 }

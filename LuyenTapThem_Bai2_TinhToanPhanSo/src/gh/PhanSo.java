@@ -36,7 +36,11 @@ public class PhanSo {
 
 	@Override
 	public String toString() {
-		return "Phân số: " + tu + "/" + mau;
+		if (tu == 0)
+			return "0";
+		if (mau == 1)
+			return String.valueOf(tu);
+		return tu + "/" + mau;
 	}
 	
 	//Hàm tìm UCLN của tử và mẫu
@@ -49,10 +53,20 @@ public class PhanSo {
 		return Math.abs(a);
 	}
 	
+	//Hàm rút gọn phân số
 	public void rutGon() {
 		int temp = UCLN(tu, mau);
 		tu /= temp;
 		mau /= temp;
+	}
+	
+	//Hàm cộng 2 phân số
+	public PhanSo cong2PS(PhanSo ps2) {
+		int tuMoi = this.tu * ps2.mau + ps2.tu * this.mau;
+		int mauMoi = this.mau * ps2.mau;
+		PhanSo ketQua = new PhanSo(tuMoi, mauMoi);
+		ketQua.rutGon();
+		return ketQua;
 	}
 	
 	
