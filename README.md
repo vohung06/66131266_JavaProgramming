@@ -24,6 +24,9 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 
 **Trọng tâm kiến thức**: OOP, ArrayList.
 
+![ảnh 1](ImageProject/QuanLyHocSinh_1.jpg)
+![ảnh 2](ImageProject/QuanLyHocSinh_2.jpg)
+![ảnh 3](ImageProject/QuanLyHocSinh_3.jpg)
 ### 2. Tính toán phân số
 [Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/LuyenTapThem_Bai2_TinhToanPhanSo)
 
@@ -35,6 +38,6 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 
 ![ảnh 1](ImageProject/TinhToanPhanSo1.jpg)
 ![ảnh 2](ImageProject/TinhToanPhanSo2.jpg)
-## 📝 Ghi chú: 
+## 📝 Ghi chú
 1. Mỗi bài tập là mỗi dự án riêng biệt, có thể chạy và thực thi độc lập.
 2. Kho này phục vụ cho mục đích học tập, vì vậy code có thể chưa tối ưu hoặc dùng để áp dụng vào các dự án lớn.
