@@ -11,7 +11,7 @@ public class Circle extends Shape{
 		this.radius = radius;
 	}
 	
-	public Circle(String color, Boolean filled, double radius) {
+	public Circle(double radius, String color, Boolean filled) {
 		super(color, filled);
 		this.radius = radius;
 	}
@@ -24,10 +24,12 @@ public class Circle extends Shape{
 		this.radius = radius;
 	}
 	
+	@Override 
 	public double getArea() {
 		return radius * radius * Math.PI;
 	}
 	
+	@Override
 	public double getPerimeter() {
 		return radius * 2 * Math.PI;
 	}
