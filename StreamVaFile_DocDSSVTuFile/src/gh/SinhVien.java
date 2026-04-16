@@ -16,6 +16,11 @@ public class SinhVien {
 		this.namSinh = namSinh;
 		this.gioiTinh = gioiTinh;
 	}
+
+	@Override
+	public String toString() {//String format: phương thức tạo định dạng, căn chỉnh độ rộng, dài chuỗi
+	    return String.format("%-5d %-20s %-10d %-10s", soThuTu, hoTen, namSinh, gioiTinh);
+	}
 	
 	
 }
