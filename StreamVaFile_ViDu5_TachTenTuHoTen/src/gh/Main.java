@@ -15,12 +15,8 @@ public class Main {
 			if (line == null)
 				break;
 			String[] s = line.split(" ");
-			int i = 0;
-			while (s[i + 1] != null) {
-				i++;
-			}
-		
-			System.out.println(s[i]);
+			
+			System.out.println(s[s.length - 1]);
 			
 		}
 		
