@@ -1,8 +1,8 @@
 package gh;
 
 public class MovablePoint extends Point {
-	private float xSpeed;
-	private float ySpeed;
+	private float xSpeed = 0;
+	private float ySpeed = 0;
 	
 	public MovablePoint() {
 		
