@@ -21,7 +21,7 @@ public abstract class Shape {
 		this.color = color;
 	}
 
-	public Boolean getFilled() {
+	public Boolean isFilled() {
 		return filled;
 	}
 
