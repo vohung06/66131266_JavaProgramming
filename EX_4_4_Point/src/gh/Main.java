@@ -11,7 +11,7 @@ public class Main {
 		System.out.println("Toạ độ Y: " + p2.getY());
 		float[] arr_p2 = p2.getXY();
 		System.out.println("Toạ độ X và Y: " + arr_p2[0] + " và " + arr_p2[1]);
-		System.out.println(p2);        
+		System.out.println(p2);
 		
 		MovablePoint mp1 = new MovablePoint();
 		System.out.println("\n" + mp1);
