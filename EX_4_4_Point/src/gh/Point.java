@@ -8,7 +8,7 @@ public class Point {
 		
 	}
 	
-	public Point(float x, float y) {
+	public Point(float x, loat y) {
 		this.x = x;
 		this.y = y;
 	}
