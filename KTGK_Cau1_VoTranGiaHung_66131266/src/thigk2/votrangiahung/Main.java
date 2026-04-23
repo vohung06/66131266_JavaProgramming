@@ -24,6 +24,9 @@ public class Main {
 		double dienTich = canh1 * canh2;
 		
 		System.out.println("=> Dien tich hinh chu nhat la: " + dienTich);
+		
+		double chuVi = (canh1 + canh2) * 2;
+		System.out.println("=> Chu vi hinh chu nhat la: " + chuVi);
 	}
 
 }
