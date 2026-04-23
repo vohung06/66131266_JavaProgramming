@@ -18,8 +18,10 @@ public class Main {
 			String line = br.readLine();
 			if (line == null)
 				break;
-			ds.add(Double.parseDouble(line));
-			System.out.println(line);
+			double x = Double.parseDouble(line);
+			ds.add(x);
+			//in ngay sau khi đã đọc được số đó
+			System.out.println(x);
 		}
 		
 		double X = 10; //ngày sinh của em
