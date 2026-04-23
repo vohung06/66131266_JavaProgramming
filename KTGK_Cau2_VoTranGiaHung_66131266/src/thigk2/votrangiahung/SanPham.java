@@ -51,6 +51,11 @@ public class SanPham {
 	public void setGiaSP(int giaSP) {
 		this.giaSP = giaSP;
 	}
+
+	@Override
+	public String toString() {
+		return "Mã sản phẩm: " + maSP + ", tên sản phẩm: " + tenSP + ", loại sản phẩm: " + loaiSP + ", giá: " + giaSP;
+ 	}
 	
 	
 	
