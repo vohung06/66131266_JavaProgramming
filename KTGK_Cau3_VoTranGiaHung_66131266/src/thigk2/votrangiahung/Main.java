@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//em dùng lớp FileReader và BufferedReader để đọc từ file, sau đó dùng ArrayList để lưu giá trị để kiểm tra X có xuất hiện trong các số 
+
 public class Main {
 
 	public static void main(String[] args) throws IOException {
@@ -19,6 +21,7 @@ public class Main {
 			if (line == null)
 				break;
 			double x = Double.parseDouble(line);
+			//lưu vào arraylist để dễ cho việc kiểm tra giá trị X
 			ds.add(x);
 			//in ngay sau khi đã đọc được số đó
 			System.out.println(x);
