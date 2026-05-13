@@ -1,6 +1,6 @@
 package gh;
 
-import java.time.LocalDate;
+import java.time.LocalDate; //lớp lấy ngày LocalDate(year, month, day)
 
 public class ThucPham {
 	private String maHang = "";
@@ -68,6 +68,13 @@ public class ThucPham {
 	        this.ngayHetHan = ngayHetHan;
 	    else
 	        this.ngayHetHan = null;
+	}
+	
+	public boolean kiemTraHSD() {
+		if (ngayHetHan == null)
+			return false;
+		else
+			return ngayHetHan.isAfter(LocalDate.now()); //LocalDate.now() -> phương thức trả về ngày hiện tại 
 	}
 
 	@Override
