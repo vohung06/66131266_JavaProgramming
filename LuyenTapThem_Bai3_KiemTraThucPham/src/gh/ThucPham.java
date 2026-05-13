@@ -69,6 +69,12 @@ public class ThucPham {
 	    else
 	        this.ngayHetHan = null;
 	}
+
+	@Override
+	public String toString() {
+		return "ThucPham [maHang=" + maHang + ", tenHang=" + tenHang + ", donGia=" + donGia + ", ngaySanXuat="
+				+ ngaySanXuat + ", ngayHetHan=" + ngayHetHan + "]";
+	}
 	
 	
 }
