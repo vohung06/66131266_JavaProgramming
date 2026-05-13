@@ -1,22 +1,24 @@
 package gh;
 
+import java.time.LocalDate;
+
 public class ThucPham {
 	private String maHang = "";
 	private String tenHang = "Chưa có sản phẩm";
 	private int donGia = 0;
-	private String ngaySanXuat = "00/00/0000";
-	private String ngayHetHan = "00/00/0000";
+	private LocalDate ngaySanXuat;
+	private LocalDate ngayHetHan;
 	
 	public ThucPham(String maHang) {
 		this.maHang = maHang;
 	}
 	
-	public ThucPham(String maHang, String tenHang, int donGia, String ngaySanXuat, String ngayHetHan) {
+	public ThucPham(String maHang, String tenHang, int donGia, LocalDate ngaySanXuat, LocalDate ngayHetHan) {
 		setMaHang(maHang);
 		this.tenHang = tenHang;
 		setDonGia(donGia);
 		this.ngaySanXuat = ngaySanXuat;
-		
+		setNgayHetHan(ngayHetHan);
 	}
 	
 	public String getMaHang() {
@@ -48,21 +50,24 @@ public class ThucPham {
 		else	
 			this.donGia = 0; //gán giá trị mặc định cho donGia
 	}
-
-	public String getNgaySanXuat() {
+	
+	public LocalDate getNgaySanXuat() {
 		return ngaySanXuat;
 	}
 
-	public void setNgaySanXuat(String ngaySanXuat) {
+	public void setNgaySanXuat(LocalDate ngaySanXuat) {
 		this.ngaySanXuat = ngaySanXuat;
 	}
-
-	public String getNgayHetHan() {
+	
+	public LocalDate getNgayHetHan() {
 		return ngayHetHan;
 	}
 
-	public void setNgayHetHan(String ngayHetHan) {
-		this.ngayHetHan = ngayHetHan;
+	public void setNgayHetHan(LocalDate ngayHetHan) {
+	    if (ngayHetHan.isAfter(ngaySanXuat))
+	        this.ngayHetHan = ngayHetHan;
+	    else
+	        this.ngayHetHan = null;
 	}
 	
 	
