@@ -64,7 +64,7 @@ public class ThucPham {
 	}
 
 	public void setNgayHetHan(LocalDate ngayHetHan) {
-	    if (ngayHetHan.isAfter(ngaySanXuat))
+	    if (ngaySanXuat != null && ngayHetHan.isAfter(ngaySanXuat))
 	        this.ngayHetHan = ngayHetHan;
 	    else
 	        this.ngayHetHan = null;
