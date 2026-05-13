@@ -1,9 +1,9 @@
 package gh;
 
 public class ThucPham {
-	private String maHang = "0000";
+	private String maHang = "";
 	private String tenHang = "Chưa có sản phẩm";
-	private int donGia;
+	private int donGia = 0;
 	private String ngaySanXuat = "00/00/0000";
 	private String ngayHetHan = "00/00/0000";
 	
@@ -12,9 +12,22 @@ public class ThucPham {
 	}
 	
 	public ThucPham(String maHang, String tenHang, int donGia, String ngaySanXuat, String ngayHetHan) {
-		this.maHang = maHang;
+		setMaHang(maHang);
 		this.tenHang = tenHang;
+		setDonGia(donGia);
+		this.ngaySanXuat = ngaySanXuat;
 		
+	}
+	
+	public String getMaHang() {
+		return maHang;
+	}
+	
+	public void setMaHang(String maHang) {
+	    if (maHang != null && !maHang.trim().isEmpty())
+	        this.maHang = maHang;
+	    else
+	    	this.maHang = "0000";
 	}
 
 	public String getTenHang() {
@@ -33,7 +46,7 @@ public class ThucPham {
 		if (donGia > 0)
 			this.donGia = donGia;
 		else	
-			this.donGia = 0;
+			this.donGia = 0; //gán giá trị mặc định cho donGia
 	}
 
 	public String getNgaySanXuat() {
