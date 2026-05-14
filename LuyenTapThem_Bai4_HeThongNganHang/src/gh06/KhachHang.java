@@ -51,7 +51,11 @@ public class KhachHang {
 
 	@Override
 	public String toString() {
-		return "KhachHang [maKH=" + maKH + ", hoTen=" + hoTen + ", sdt=" + sdt + ", diaChi=" + diaChi + "]";
+		return "KhachHang:" + 
+				"\n - MaKH: " + maKH + 
+				"\n - Họ tên: " + hoTen + 
+				"\n - Số điện thoại: " + sdt + 
+				"\n - Địa chỉ: " + diaChi;
 	}
 	
 	
