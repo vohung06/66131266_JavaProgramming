@@ -1,10 +1,10 @@
 package gh06;
 
 public class KhachHang {
-	String maKH;
-	String hoTen;
-	String sdt;
-	String diaChi;
+	private String maKH;
+	private String hoTen;
+	private String sdt;
+	private String diaChi;
 	
 	public KhachHang() {
 		
