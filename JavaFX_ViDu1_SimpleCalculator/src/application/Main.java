@@ -1,14 +1,19 @@
-package gh06;
-
+package application;
+	
 import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 
-public class SimpleCalculator {
+
+public class Main extends Application {
+	@Override
 	public void start(Stage primaryStage) {
 		FlowPane pane = new FlowPane();
 		pane.setHgap(2);
@@ -28,5 +33,21 @@ public class SimpleCalculator {
 		Button btSub = new Button("Subtract");
 		Button btMul = new Button("Multioly");
 		Button btDiv = new Button("Divide");
+		
+		hBox.setAlignment(Pos.CENTER);
+		hBox.getChildren().addAll(btAdd, btSub, btMul, btDiv);
+		
+		BorderPane borderPane = new BorderPane();
+		borderPane.setCenter(pane);
+		borderPane.setBottom(hBox);
+		
+		Scene scn = new Scene(borderPane, 250, 150);
+		primaryStage.setTitle("Simple Calculator!");
+		primaryStage.setScene(scn);
+		primaryStage.show();
+	}
+	
+	public static void main(String[] args) {
+		launch(args);
 	}
 }
