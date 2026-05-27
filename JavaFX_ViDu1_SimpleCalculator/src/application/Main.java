@@ -49,6 +49,22 @@ public class Main extends Application {
 		btAdd.setOnAction(e -> {
 			tfResult.setText(Double.parseDouble(tfNumber1.getText()) + Double.parseDouble(tfNumber2.getText()) + "");
 		});
+		
+		btSub.setOnAction(e -> {
+			tfResult.setText(Double.parseDouble(tfNumber1.getText()) - Double.parseDouble(tfNumber2.getText()) + "");
+		});
+		
+		btMul.setOnAction(e -> {
+			tfResult.setText(Double.parseDouble(tfNumber1.getText()) * Double.parseDouble(tfNumber2.getText()) + "");
+		});
+		
+		btDiv.setOnAction(e -> {
+			if(Double.parseDouble(tfNumber2.getText()) == 0) {
+				tfResult.setText("Error!");
+			}
+			else
+				tfResult.setText(Double.parseDouble(tfNumber1.getText()) / Double.parseDouble(tfNumber2.getText()) + "");
+		});
 	}
 	
 	public static void main(String[] args) {
