@@ -45,6 +45,10 @@ public class Main extends Application {
 		primaryStage.setTitle("Simple Calculator");
 		primaryStage.setScene(scn);
 		primaryStage.show();
+		
+		btAdd.setOnAction(e -> {
+			tfResult.setText(Double.parseDouble(tfNumber1.getText()) + Double.parseDouble(tfNumber2.getText()) + "");
+		});
 	}
 	
 	public static void main(String[] args) {
