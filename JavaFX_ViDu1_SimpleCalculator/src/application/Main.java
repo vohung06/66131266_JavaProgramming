@@ -26,12 +26,12 @@ public class Main extends Application {
 		tfNumber2.setPrefColumnCount(3);
 		tfResult.setPrefColumnCount(3);
 		
-		pane.getChildren().addAll(new Label("Number 1"), tfNumber1, new Label("Number 2"), tfNumber2, new Label("Result: "), tfResult);
+		pane.getChildren().addAll(new Label("Number 1: "), tfNumber1, new Label("Number 2: "), tfNumber2, new Label("Result: "), tfResult);
 		
 		HBox hBox = new HBox(5);
 		Button btAdd = new Button("Add");
 		Button btSub = new Button("Subtract");
-		Button btMul = new Button("Multioly");
+		Button btMul = new Button("Multiply");
 		Button btDiv = new Button("Divide");
 		
 		hBox.setAlignment(Pos.CENTER);
@@ -41,8 +41,8 @@ public class Main extends Application {
 		borderPane.setCenter(pane);
 		borderPane.setBottom(hBox);
 		
-		Scene scn = new Scene(borderPane, 250, 150);
-		primaryStage.setTitle("Simple Calculator!");
+		Scene scn = new Scene(borderPane, 350, 150);
+		primaryStage.setTitle("Simple Calculator");
 		primaryStage.setScene(scn);
 		primaryStage.show();
 	}
