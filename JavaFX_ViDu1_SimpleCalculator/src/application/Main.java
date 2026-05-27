@@ -65,6 +65,7 @@ public class Main extends Application {
 			else
 				tfResult.setText(Double.parseDouble(tfNumber1.getText()) / Double.parseDouble(tfNumber2.getText()) + "");
 		});
+		
 	}
 	
 	public static void main(String[] args) {
