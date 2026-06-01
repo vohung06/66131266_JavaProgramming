@@ -3,6 +3,7 @@ package gh06;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -21,6 +22,7 @@ public class LoginView {
 		
 		Label lbTitle = new Label("ĐĂNG NHẬP HỆ THỐNG");
 		HBox titleBox = new HBox(lbTitle);
+		
 		Label lbName = new Label("Tên đăng nhập: ");
 		Label lbPass = new Label("Mật khẩu: ");
 		
@@ -44,7 +46,25 @@ public class LoginView {
 		ImageView iv = new ImageView(img);
 		iv.setFitHeight(150);
 		iv.setFitWidth(150);
+		
 		root.getChildren().addAll(iv, loginBox);
+		
+		//Xử lý sự kiện
+		btn.setOnAction(e -> {
+			if (tfName.getText().equals("admin") && pfPass.getText().equals("123")) {
+				HomeView home = new HomeView();
+				stage.setScene(home.createScene(stage));
+			}
+			else {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setTitle("Đăng nhập thất bại!");
+				alert.setHeaderText(null);
+				alert.setContentText("Tên đăng nhập và mật khẩu không chính xác.");
+				alert.showAndWait();
+				return;
+			}
+				
+		});
 		
 		//Chỉnh sửa giao diện
 		root.setPadding(new Insets(20));
