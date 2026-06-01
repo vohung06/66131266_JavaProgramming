@@ -1,5 +1,7 @@
 package gh06;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -38,11 +40,18 @@ public class LoginView {
 		
 		Image img = new Image("file:images/logo.png");
 		ImageView iv = new ImageView(img);
-		iv.setFitHeight(100);
-		iv.setFitWidth(100);
-		
+		iv.setFitHeight(120);
+		iv.setFitWidth(120);
 		root.getChildren().addAll(iv, loginBox);
 		
-		return new Scene(root, 400, 300);
+		//Chỉnh sửa giao diện
+		root.setPadding(new Insets(20));
+		lbTitle.setStyle("-fx-font-weight:bold; -fx-text-fill:navy; -fx-font-size: 20px");
+		lbName.setStyle("-fx-font-size: 14px");
+		lbPass.setStyle("-fx-font-size: 14px");
+		tfName.setStyle("-fx-font-size: 14px");
+		pfPass.setStyle("-fx-font-size: 14px");
+		btn.setStyle("-fx-background-color: navy; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;");
+		return new Scene(root, 500, 350);
 	}
 }
