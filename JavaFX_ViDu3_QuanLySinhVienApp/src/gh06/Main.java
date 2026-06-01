@@ -3,6 +3,7 @@ package gh06;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -41,6 +42,13 @@ public class Main extends Application {
 		root.getChildren().addAll(hb1, hb2, hbBtn, listView);
 		
 		btn1.setOnAction(e -> {
+			//xử lí trường hợp rỗng trước khi thêm
+			if(tf1.getText().trim().isEmpty() || tf2.getText().trim().isEmpty()) {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setContentText("Không được để trống");
+				alert.showAndWait();
+				return;
+			}
 			String mssv = tf1.getText();
 			String hoTen = tf2.getText();
 			String sv = mssv + " - " + hoTen;
@@ -50,12 +58,12 @@ public class Main extends Application {
 		});
 		
 
-		
 		btn2.setOnAction(e -> {
 			String selected = listView.getSelectionModel().getSelectedItem();
 			listView.getItems().remove(selected);
 		});
 		
+				
 		Scene scn = new Scene(root, 500, 500);
 		primaryStage.setTitle("Quản lý sinh viên");
 		primaryStage.setScene(scn);
