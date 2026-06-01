@@ -9,7 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class HomeView {
+public class LoginView {
 	public Scene createScene(Stage stage) {
 		VBox root = new VBox(10);
 		
