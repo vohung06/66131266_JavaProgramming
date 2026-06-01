@@ -36,10 +36,19 @@ public class Main extends Application {
 		
 		hbBtn.getChildren().addAll(btn1, btn2);
 		
-//		ListView<String> listView = new ListView<>();
+		ListView<String> listView = new ListView<>();
 		
-		root.getChildren().addAll(hb1, hb2, hbBtn);
-		Scene scn = new Scene(root, 350, 150);
+		root.getChildren().addAll(hb1, hb2, hbBtn, listView);
+		
+		btn1.setOnAction(e -> {
+			String mssv = tf1.getText();
+			String hoTen = tf2.getText();
+			String sv = mssv + " - " + hoTen;
+			listView.getItems().add(sv);
+		});
+		
+		
+		Scene scn = new Scene(root, 500, 500);
 		primaryStage.setTitle("Quản lý sinh viên");
 		primaryStage.setScene(scn);
 		primaryStage.show();
