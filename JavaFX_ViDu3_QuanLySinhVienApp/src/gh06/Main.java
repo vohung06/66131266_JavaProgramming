@@ -14,6 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Line;
 
 
 public class Main extends Application {
@@ -39,9 +40,17 @@ public class Main extends Application {
 		
 		hbBtn.getChildren().addAll(btn1, btn2);
 		
+		Line line = new Line();
+		line.setStartX(15);
+		line.setStartY(100);
+		line.setEndX(485);
+		line.setEndY(100);
+		
+		Label lb3 = new Label("Danh sách sinh viên");
+		
 		ListView<String> listView = new ListView<>();
 		
-		root.getChildren().addAll(grid, hbBtn, listView);
+		root.getChildren().addAll(grid, hbBtn, line, lb3, listView);
 		
 		btn1.setOnAction(e -> {
 			//xử lí trường hợp rỗng trước khi thêm
@@ -75,6 +84,7 @@ public class Main extends Application {
 		lb1.setStyle("-fx-font-weight:bold");
 		tf2.setPrefWidth(300);
 		lb2.setStyle("-fx-font-weight:bold");
+		lb3.setStyle("-fx-font-weight:bold");
 		hbBtn.setAlignment(Pos.CENTER);
 		btn1.setPrefWidth(100);
 		btn2.setPrefWidth(100);
