@@ -45,8 +45,16 @@ public class Main extends Application {
 			String hoTen = tf2.getText();
 			String sv = mssv + " - " + hoTen;
 			listView.getItems().add(sv);
+			tf1.clear();
+			tf2.clear();
 		});
 		
+
+		
+		btn2.setOnAction(e -> {
+			String selected = listView.getSelectionModel().getSelectedItem();
+			listView.getItems().remove(selected);
+		});
 		
 		Scene scn = new Scene(root, 500, 500);
 		primaryStage.setTitle("Quản lý sinh viên");
