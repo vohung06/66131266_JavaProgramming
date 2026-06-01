@@ -5,13 +5,17 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class LoginView {
 	public Scene createScene(Stage stage) {
-		VBox root = new VBox(10);
+		HBox root = new HBox(20);
+		VBox loginBox = new VBox(10);
 		
 		Label lbTitle = new Label("ĐĂNG NHẬP HỆ THỐNG");
 		Label lbName = new Label("Tên đăng nhập: ");
@@ -30,9 +34,15 @@ public class LoginView {
 		
 		Button btn = new Button("Đăng nhập");
 		
-		root.getChildren().addAll(lbTitle, gPane, btn);
+		loginBox.getChildren().addAll(lbTitle, gPane, btn);
 		
+		Image img = new Image("file:images/logo.png");
+		ImageView iv = new ImageView(img);
+		iv.setFitHeight(100);
+		iv.setFitWidth(100);
 		
-		return new Scene(root, 450, 350);
+		root.getChildren().addAll(iv, loginBox);
+		
+		return new Scene(root, 400, 300);
 	}
 }
