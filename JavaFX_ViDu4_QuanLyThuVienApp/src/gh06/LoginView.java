@@ -20,6 +20,7 @@ public class LoginView {
 		VBox loginBox = new VBox(10);
 		
 		Label lbTitle = new Label("ĐĂNG NHẬP HỆ THỐNG");
+		HBox titleBox = new HBox(lbTitle);
 		Label lbName = new Label("Tên đăng nhập: ");
 		Label lbPass = new Label("Mật khẩu: ");
 		
@@ -35,13 +36,14 @@ public class LoginView {
 		gPane.add(pfPass, 1, 1);
 		
 		Button btn = new Button("Đăng nhập");
+		HBox btnBox = new HBox(btn);
 		
-		loginBox.getChildren().addAll(lbTitle, gPane, btn);
+		loginBox.getChildren().addAll(titleBox, gPane, btnBox);
 		
 		Image img = new Image("file:images/logo.png");
 		ImageView iv = new ImageView(img);
-		iv.setFitHeight(120);
-		iv.setFitWidth(120);
+		iv.setFitHeight(150);
+		iv.setFitWidth(150);
 		root.getChildren().addAll(iv, loginBox);
 		
 		//Chỉnh sửa giao diện
@@ -52,6 +54,8 @@ public class LoginView {
 		tfName.setStyle("-fx-font-size: 14px");
 		pfPass.setStyle("-fx-font-size: 14px");
 		btn.setStyle("-fx-background-color: navy; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;");
+		titleBox.setAlignment(Pos.CENTER);
+		btnBox.setAlignment(Pos.CENTER);
 		return new Scene(root, 500, 350);
 	}
 }
