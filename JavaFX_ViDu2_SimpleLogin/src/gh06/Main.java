@@ -38,8 +38,8 @@ public class Main extends Application {
 		gridPane.add(button1, 0, 2);
 		gridPane.add(button2, 1, 2);
 		
-		button1.setStyle("-fx-background-color: darkslateblue; -fx");
-		button2.setStyle("-fx-background-color: darkslateblue; -fx");
+		button1.setStyle("-fx-background-color: red; -fx");
+		button2.setStyle("-fx-background-color: red; -fx");
 		text1.setStyle("-fx-font: normal bold 20px 'serif' ");
 		text2.setStyle("-fx-font: normal bold 20px 'serif' ");
 		gridPane.setStyle("-fx-background-color: BEIGE;");
