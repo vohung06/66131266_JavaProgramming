@@ -68,7 +68,7 @@ public class LoginView {
 		
 		//Chỉnh sửa giao diện
 		root.setPadding(new Insets(20));
-		lbTitle.setStyle("-fx-font-weight:bold; -fx-text-fill:navy; -fx-font-size: 20px");
+		lbTitle.setStyle("-fx-font-weight:bold; -fx-text-fill:navy; -fx-font-size: 24px");
 		lbName.setStyle("-fx-font-size: 14px");
 		lbPass.setStyle("-fx-font-size: 14px");
 		tfName.setStyle("-fx-font-size: 14px");
