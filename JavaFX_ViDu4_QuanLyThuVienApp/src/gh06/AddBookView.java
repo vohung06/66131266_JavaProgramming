@@ -51,6 +51,7 @@ public class AddBookView {
 		HBox btnBox = new HBox(20);
 		Button btn1 = new Button("Lưu");
 		Button btn2 = new Button("Quay lại");
+		btnBox.getChildren().addAll(btn1, btn2);
 		
 		root.getChildren().addAll(lbTitle, gPane, btnBox);
 		
