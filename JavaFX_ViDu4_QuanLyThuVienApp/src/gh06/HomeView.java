@@ -7,16 +7,17 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class HomeView {
 	public Scene createScene(Stage stage) {
-		BorderPane root = new BorderPane();
+		VBox root = new VBox();
 		
 		Image img = new Image("file:images/header_home.png");
 		ImageView iv = new ImageView(img);
-		iv.setFitHeight(80);
-		iv.setFitWidth(80);
+		iv.setFitHeight(50);
+		iv.setFitWidth(50);
 		
 		Label lbTitle = new Label("QUẢN LÝ THƯ VIỆN");
 				
@@ -29,11 +30,26 @@ public class HomeView {
 		
 		HBox btnBox = new HBox(15);
 		btnBox.getChildren().addAll(btnAdd, btnList, btnLogOut);
-			
-		root.setTop(headerBox);
-		root.setLeft(btnAdd);
-		root.setCenter(btnList);
-		root.setRight(btnLogOut);
+		
+		root.getChildren().addAll(headerBox, btnBox);
+		
+		//Xử lý sự kiện
+		btnAdd.setOnAction(e -> {
+			AddBookView addView = new AddBookView();
+			stage.setScene(addView.createScene(stage));
+		});
+		
+		btnList.setOnAction(e -> {
+			ListView listView = new ListView();
+			stage.setScene(listView.createScene(stage));
+		});
+		
+		btnLogOut.setOnAction(e -> {
+			HomeView homeView = new HomeView();
+			stage.setScene(homeView.createScene(stage));
+		});
+		
+		//Chỉnh sửa giao diện
 		
 		lbTitle.setStyle("-fx-font-weight:bold; -fx-text-fill:navy; -fx-font-size: 20px");
 		return new Scene(root, 500, 350);
