@@ -28,6 +28,7 @@ public class AddBookView {
 		TextField tfMa = new TextField();
 		TextField tfTen = new TextField();
 		ComboBox<String> cbTheLoai = new ComboBox<>();
+		cbTheLoai.getItems().addAll("Tiểu thuyết", "Văn học", "Kinh tế", "Lịch sử", "Ngoại ngữ", "Công nghệ thông tin");
 		ToggleGroup tgTinhTrang = new ToggleGroup();
 		RadioButton rbCon = new RadioButton("Còn hàng");
 		RadioButton rbHet = new RadioButton("Hết hàng");
