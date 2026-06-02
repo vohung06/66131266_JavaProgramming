@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 public class LoginView {
 	public Scene createScene(Stage stage) {
 		HBox root = new HBox(20);
-		VBox loginBox = new VBox(10);
+		VBox loginBox = new VBox(20);
 		
 		Label lbTitle = new Label("ĐĂNG NHẬP HỆ THỐNG");
 		HBox titleBox = new HBox(lbTitle);
@@ -44,8 +44,8 @@ public class LoginView {
 		
 		Image img = new Image("file:images/logo.png");
 		ImageView iv = new ImageView(img);
-		iv.setFitHeight(150);
-		iv.setFitWidth(150);
+		iv.setFitHeight(160);
+		iv.setFitWidth(160);
 		
 		root.getChildren().addAll(iv, loginBox);
 		
@@ -54,6 +54,7 @@ public class LoginView {
 			if (tfName.getText().equals("admin") && pfPass.getText().equals("123")) {
 				HomeView home = new HomeView();
 				stage.setScene(home.createScene(stage));
+				stage.setTitle("Trang chủ");
 			}
 			else {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -76,6 +77,6 @@ public class LoginView {
 		btn.setStyle("-fx-background-color: navy; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;");
 		titleBox.setAlignment(Pos.CENTER);
 		btnBox.setAlignment(Pos.CENTER);
-		return new Scene(root, 500, 350);
+		return new Scene(root, 600, 250);
 	}
 }

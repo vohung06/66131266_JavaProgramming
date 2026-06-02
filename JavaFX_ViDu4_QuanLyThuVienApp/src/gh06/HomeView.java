@@ -26,9 +26,9 @@ public class HomeView {
 		HBox headerBox = new HBox(20);
 		headerBox.getChildren().addAll(iv, lbTitle);
 		
-		Button btnAdd = new Button("Thêm sách");
-		Button btnList = new Button("Danh sách sách");
-		Button btnLogOut = new Button("Đăng xuất");
+		Button btnAdd = new Button("  Thêm sách");
+		Button btnList = new Button("  Danh sách sách");
+		Button btnLogOut = new Button("  Đăng xuất");
 		
 		HBox btnBox = new HBox(15);
 		btnBox.getChildren().addAll(btnAdd, btnList, btnLogOut);
@@ -55,16 +55,19 @@ public class HomeView {
 		btnAdd.setOnAction(e -> {
 			AddBookView addView = new AddBookView();
 			stage.setScene(addView.createScene(stage));
+			stage.setTitle("Thêm sách");
 		});
 		
 		btnList.setOnAction(e -> {
-			ListView listView = new ListView();
-			stage.setScene(listView.createScene(stage));
+			BookListView bookListView = new BookListView();
+			stage.setScene(bookListView.createScene(stage));
+			stage.setTitle("Danh sách sách");
 		});
 		
 		btnLogOut.setOnAction(e -> {
-			HomeView homeView = new HomeView();
+			LoginView homeView = new LoginView();
 			stage.setScene(homeView.createScene(stage));
+			stage.setTitle("Đăng nhập");
 		});
 		
 		//Chỉnh sửa giao diện		
@@ -77,6 +80,6 @@ public class HomeView {
 		btnAdd.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
 		btnList.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
 		btnLogOut.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
-		return new Scene(root, 600, 400);
+		return new Scene(root, 600, 250);
 	}
 }
