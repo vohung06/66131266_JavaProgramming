@@ -1,6 +1,7 @@
 package gh06;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -27,15 +28,32 @@ public class AddBookView {
 		TextField tfMa = new TextField();
 		TextField tfTen = new TextField();
 		ComboBox<String> cbTheLoai = new ComboBox<>();
-		ToggleGroup tGroup = new ToggleGroup();
+		ToggleGroup tgTinhTrang = new ToggleGroup();
 		RadioButton rbCon = new RadioButton("Còn hàng");
 		RadioButton rbHet = new RadioButton("Hết hàng");
-		rbCon.setToggleGroup(tGroup);
-		rbHet.setToggleGroup(tGroup);
+		rbCon.setToggleGroup(tgTinhTrang);
+		rbHet.setToggleGroup(tgTinhTrang);
+		HBox hbTinhTrang = new HBox(40);
+		hbTinhTrang.getChildren().addAll(rbCon, rbHet);
 		TextField tfGhiChu = new TextField();
 		
+		gPane.add(lbMa, 0, 0);
+		gPane.add(lbTen, 0, 1);
+		gPane.add(lbTheLoai, 0, 2);
+		gPane.add(lbTinhTrang, 0, 3);
+		gPane.add(lbGhiChu, 0, 4);
+		gPane.add(tfMa, 1, 0);
+		gPane.add(tfTen, 1, 1);
+		gPane.add(cbTheLoai, 1, 2);
+		gPane.add(hbTinhTrang, 1, 3);
+		gPane.add(tfGhiChu, 1, 4);
 		
+		HBox btnBox = new HBox(20);
+		Button btn1 = new Button("Lưu");
+		Button btn2 = new Button("Quay lại");
 		
-		return null;
+		root.getChildren().addAll(lbTitle, gPane, btnBox);
+		
+		return new Scene(root, 600, 400);
 	}
 }
