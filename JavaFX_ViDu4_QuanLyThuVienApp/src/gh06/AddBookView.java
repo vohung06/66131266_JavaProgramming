@@ -56,6 +56,11 @@ public class AddBookView {
 		
 		root.getChildren().addAll(lbTitle, gPane, btnBox);
 		
+		//Xử lý sự kiện
+		btn1.setOnAction(e -> {
+			String ma = tfMa.getText();
+			
+		});
 		return new Scene(root, 600, 400);
 	}
 }
