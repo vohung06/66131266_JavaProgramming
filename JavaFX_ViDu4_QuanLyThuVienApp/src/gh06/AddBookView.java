@@ -1,6 +1,7 @@
 package gh06;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -58,11 +59,25 @@ public class AddBookView {
 		
 		//Xử lý sự kiện
 		btn1.setOnAction(e -> {
+			if(tfMa.getText().trim().isEmpty() ||
+			   tfTen.getText().trim().isEmpty() ||
+			   cbTheLoai.getValue().isEmpty() ||
+			   tgTinhTrang.getSelectedToggle() == null ||
+			   tfGhiChu.getText().trim().isEmpty()) {
+				Alert alert = new Alert(Alert.AlertType.ERROR);
+				alert.setTitle("Thao tác thất bại!");
+				alert.setHeaderText(null);
+				alert.setContentText("Vui lòng nhập đầy đủ các thông tin.");
+				alert.showAndWait();
+				return;
+			}
+			//lấy dữ liệu nhập
 			String ma = tfMa.getText();
 			String ten = tfTen.getText();
 			String theLoai = cbTheLoai.getValue();
 			boolean tinhTrang = rbCon.isSelected();
 			String ghiChu = tfGhiChu.getText();
+			//tạo đối tượng sách mới và thêm vào danh sách sách
 			Book book = new Book(ma, ten, theLoai, tinhTrang, ghiChu);
 			DataStore.books.add(book);
 		});
