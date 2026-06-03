@@ -59,7 +59,18 @@ public class AddBookView {
 		//Xử lý sự kiện
 		btn1.setOnAction(e -> {
 			String ma = tfMa.getText();
-			
+			String ten = tfTen.getText();
+			String theLoai = cbTheLoai.getValue();
+			boolean tinhTrang = rbCon.isSelected();
+			String ghiChu = tfGhiChu.getText();
+			Book book = new Book(ma, ten, theLoai, tinhTrang, ghiChu);
+			DataStore.books.add(book);
+		});
+		
+		btn2.setOnAction(e -> {
+			HomeView home = new HomeView();
+			stage.setScene(home.createScene(stage));
+			stage.setTitle("Trang chủ");
 		});
 		return new Scene(root, 600, 400);
 	}
