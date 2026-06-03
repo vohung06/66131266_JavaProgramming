@@ -58,6 +58,7 @@ public class Book {
 	public void setGhiChu(String ghiChu) {
 		this.ghiChu = ghiChu;
 	}
+
 	
 	
 	

@@ -30,7 +30,7 @@ public class HomeView {
 		Button btnList = new Button("  Danh sách sách");
 		Button btnLogOut = new Button("  Đăng xuất");
 		
-		HBox btnBox = new HBox(15);
+		HBox btnBox = new HBox(25);
 		btnBox.getChildren().addAll(btnAdd, btnList, btnLogOut);
 		
 		ImageView ivIconAdd = new ImageView(new Image("file:images/icon_add_home.png"));

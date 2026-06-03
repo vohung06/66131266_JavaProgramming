@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -52,10 +54,20 @@ public class AddBookView {
 		gPane.add(hbTinhTrang, 1, 3);
 		gPane.add(tfGhiChu, 1, 4);
 		
-		HBox btnBox = new HBox(20);
-		Button btn1 = new Button("Lưu");
-		Button btn2 = new Button("Quay lại");
+		HBox btnBox = new HBox(30);
+		Button btn1 = new Button("  Lưu");
+		Button btn2 = new Button("  Quay lại");
 		btnBox.getChildren().addAll(btn1, btn2);
+		
+		ImageView ivIconSave = new ImageView(new Image("file:images/icon_save_addbook.png"));
+		ivIconSave.setFitWidth(30);
+		ivIconSave.setFitHeight(30);
+		btn1.setGraphic(ivIconSave);
+		
+		ImageView ivIconBack = new ImageView(new Image("file:images/icon_back_addbook.png"));
+		ivIconBack.setFitWidth(30);
+		ivIconBack.setFitHeight(30);
+		btn2.setGraphic(ivIconBack);
 		
 		root.getChildren().addAll(lbTitle, gPane, btnBox);
 		
@@ -94,11 +106,18 @@ public class AddBookView {
 		lbTitle.setStyle("-fx-font-weight:bold; -fx-text-fill:navy; -fx-font-size: 24px");
 		lbTitle.setMaxWidth(Double.MAX_VALUE);
 		lbTitle.setAlignment(Pos.CENTER);
-		root.setPadding(new Insets(10));
-		gPane.setHgap(15);
-		gPane.setVgap(10);
-		btn1.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
+		root.setPadding(new Insets(20));
+		gPane.setHgap(25);
+		gPane.setVgap(20);
+		tfMa.setPrefWidth(350);
+		tfTen.setPrefWidth(350);
+		cbTheLoai.setPrefWidth(350);
+		tfGhiChu.setPrefWidth(350);
+		btn1.setStyle("-fx-background-color: navy; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;");
 		btn2.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
+		root.setStyle("-fx-font-size: 14px");
+		btnBox.setAlignment(Pos.CENTER);
+		btnBox.setPadding(new Insets(10, 0, 0, 0));
 		return new Scene(root, 600, 400);
 	}
 }
