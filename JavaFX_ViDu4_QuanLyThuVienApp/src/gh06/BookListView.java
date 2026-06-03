@@ -39,8 +39,8 @@ public class BookListView {
         }
 		
 		HBox btnBox = new HBox(20);
-		Button btn1 = new Button("Xoá");
-		Button btn2 = new Button("Quay lại");
+		Button btn1 = new Button("  Xoá");
+		Button btn2 = new Button("  Quay lại");
 		btnBox.getChildren().addAll(btn1, btn2);
 		
 		ImageView ivIconDelete = new ImageView(new Image("file:images/icon_bin_booklist.png"));
