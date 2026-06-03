@@ -10,10 +10,9 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-//		LoginView login = new LoginView();
-		AddBookView abv = new AddBookView();
+		LoginView login = new LoginView();
 		
-		primaryStage.setScene(abv.createScene(primaryStage));
+		primaryStage.setScene(login.createScene(primaryStage));
 		primaryStage.setTitle("Đăng nhập");
 		primaryStage.show();
 	}

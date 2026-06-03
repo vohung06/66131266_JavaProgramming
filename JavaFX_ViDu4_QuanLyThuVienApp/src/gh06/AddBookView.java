@@ -94,6 +94,12 @@ public class AddBookView {
 			//tạo đối tượng sách mới và thêm vào danh sách sách
 			Book book = new Book(ma, ten, theLoai, tinhTrang, ghiChu);
 			DataStore.books.add(book);
+			//xoá các ô nhập
+			tfMa.clear();
+			tfTen.clear();
+			cbTheLoai.setValue(null);
+			tgTinhTrang.selectToggle(null);
+			tfGhiChu.clear();
 		});
 		
 		btn2.setOnAction(e -> {
