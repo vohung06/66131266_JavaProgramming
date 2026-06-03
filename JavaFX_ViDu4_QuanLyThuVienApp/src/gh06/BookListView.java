@@ -1,10 +1,13 @@
 package gh06;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -14,19 +17,30 @@ public class BookListView {
 		
 		Label lbTitle = new Label("DANH SÁCH SÁCH");
 		
+		
 		//sử dụng TableView để tạo bảng hiển thị thông tin đẹp
-		TableView<Book> table = new TableView<>();
-		TableColumn<Book, String> colMa = new TableColumn<>("Mã sách");
-		TableColumn<Book, String> colTen = new TableColumn<>("Tên sách");
-		TableColumn<Book, String> colTheLoai = new TableColumn<>("Thể loại");
-		TableColumn<Book, String> colTinhTrang = new TableColumn<>("Tình trạng");
-		TableColumn<Book, String> colGhiChu = new TableColumn<>("Ghi chú");
-		//liên kết cột với Book
-		colMa.setCellValueFactory(new PropertyValueFactory<>("maSach"));
-		colTen.setCellValueFactory(new PropertyValueFactory<>("tenSach"));
-		colTheLoai.setCellValueFactory(new PropertyValueFactory<>("theLoai"));
-		colTinhTrang.setCellValueFactory(new PropertyValueFactory<>("tinhTrang"));
-		colGhiChu.setCellValueFactory(new PropertyValueFactory<>("ghiChu"));
-		return null;
+
+        ListView<String> listView = new ListView<>();
+
+        for (Book b : DataStore.books) {
+            String tt = b.isTinhTrang() ? "Còn hàng" : "Hết hàng";
+
+            listView.getItems().add(
+                b.getMaSach() + " | " +
+                b.getTenSach() + " | " +
+                b.getTheLoai() + " | " +
+                tt + " | " +
+                b.getGhiChu()
+            );
+        }
+		
+		HBox btnBox = new HBox(20);
+		Button btn1 = new Button("Xoá");
+		Button btn2 = new Button("Quay lại");
+		btnBox.getChildren().addAll(btn1, btn2);
+		
+		root.getChildren().addAll(lbTitle, listView, btnBox);
+		
+		return new Scene(root, 600, 400);
 	}
 }
