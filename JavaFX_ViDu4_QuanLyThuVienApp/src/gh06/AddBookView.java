@@ -1,5 +1,7 @@
 package gh06;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -87,6 +89,16 @@ public class AddBookView {
 			stage.setScene(home.createScene(stage));
 			stage.setTitle("Trang chủ");
 		});
+		
+		//Chỉnh sửa giao diện
+		lbTitle.setStyle("-fx-font-weight:bold; -fx-text-fill:navy; -fx-font-size: 24px");
+		lbTitle.setMaxWidth(Double.MAX_VALUE);
+		lbTitle.setAlignment(Pos.CENTER);
+		root.setPadding(new Insets(10));
+		gPane.setHgap(15);
+		gPane.setVgap(10);
+		btn1.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
+		btn2.setStyle("-fx-background-color: #eeeeee; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;");
 		return new Scene(root, 600, 400);
 	}
 }
