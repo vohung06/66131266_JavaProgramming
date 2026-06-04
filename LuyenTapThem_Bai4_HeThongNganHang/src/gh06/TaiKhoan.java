@@ -39,7 +39,10 @@ public class TaiKhoan {
 		this.chuTK = chuTK;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return stk + chuTK + soDu;
+	}
 	
 	
 	
