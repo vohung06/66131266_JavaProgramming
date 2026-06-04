@@ -1,18 +1,19 @@
 package gh06;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Xe {
 	private String dongXe;
 	private int soChoNgoi;
-	private String ngaySX = "11/6/2019";
+	private LocalDate ngaySX = LocalDate.of(2019, 6, 11);
 	private int giaSan = 400;
 	
 	public Xe() {
 		
 	}
 	
-	public Xe(String dongXe, int soChoNgoi, String ngaySX, int giaSan) {
+	public Xe(String dongXe, int soChoNgoi, LocalDate ngaySX, int giaSan) {
 		this.dongXe = dongXe;
 		this.soChoNgoi = soChoNgoi;
 		this.ngaySX = ngaySX;
@@ -35,12 +36,12 @@ public class Xe {
 		this.soChoNgoi = soChoNgoi;
 	}
 
-	public String getNgaySX() {
+	public LocalDate getNgaySX() {
 		return ngaySX;
 	}
 
-	public void setNgaySX(String ngaySX) {
-		this.ngaySX = ngaySX;
+	public void setNgaySX(LocalDate ngay) {
+		this.ngaySX = ngay;
 	}
 
 	public int getGiaSan() {
@@ -62,14 +63,26 @@ public class Xe {
 		setSoChoNgoi(cn);
 		System.out.println(" - Nhập ngày sản xuất: ");
 		String ngay = sc.nextLine();
-		setNgaySX(ngay);
+		setNgaySX(LocalDate.parse(ngay));
 		System.out.println(" - Nhập giá sàn: ");
 		int gia = sc.nextInt();
 		setGiaSan(gia);
 	}
 	
 	public void xuat() {
-		
+		System.out.println("---> THONG TIN CUA XE: ");
+		System.out.println(" - Dòng xe: " + dongXe);
+		System.out.println(" - Số chỗ ngồi: " + soChoNgoi);
+		System.out.println(" - Ngày sản xuất: " + ngaySX);
+		System.out.println(" - Giá sàn: " + giaSan);
+	}
+	
+	public double tinhGiaBan() {
+		if (ngaySX.plusYears(2).isBefore(LocalDate.now())) {
+			return (double)giaSan * 1.15;
+		}
+		else
+			return 4.5;
 	}
 	
 }
