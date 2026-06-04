@@ -1,5 +1,7 @@
 package gh06;
 
+import java.util.Scanner;
+
 public class TaiKhoan {
 	private String stk;
 	private double soDu;
@@ -39,9 +41,22 @@ public class TaiKhoan {
 		this.chuTK = chuTK;
 	}
 	
+	public double napTien() {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Nhập số tiền cần nạp: ");
+		double tienNap = sc.nextDouble();
+		if (tienNap >= 0) {
+			soDu += tienNap;
+			System.out.println("Bạn vừa nạp " + tienNap + " VND vào tài khoản.");
+		}
+		else
+			System.out.println("Số tiền không hợp lệ!");
+		return soDu;
+	}
+	
 	@Override
 	public String toString() {
-		return stk + chuTK + soDu;
+		return "TaiKhoan [stk=" + stk + ", soDu=" + soDu + ", chuTK=" + chuTK + "]";
 	}
 	
 	
