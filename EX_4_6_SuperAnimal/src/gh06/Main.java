@@ -8,6 +8,10 @@ public class Main {
 		
 		Mammal m1 = new Mammal("Dolphin");
 		System.out.println(m1);
+		
+		Cat c1 = new Cat("Tom");
+		System.out.println(c1);
+		c1.greets();
 	}
 
 }
