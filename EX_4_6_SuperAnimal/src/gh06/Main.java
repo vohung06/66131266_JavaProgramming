@@ -12,6 +12,11 @@ public class Main {
 		Cat c1 = new Cat("Tom");
 		System.out.println(c1);
 		c1.greets();
+		
+		Dog d1 = new Dog("Mymy");
+		System.out.println(d1);
+		d1.greets();
+		d1.greets(d1);
 	}
 
 }
