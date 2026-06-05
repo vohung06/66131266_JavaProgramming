@@ -13,6 +13,11 @@ public class Xe {
 		
 	}
 	
+	public Xe(String dongXe, int soChoNgoi) {
+		this.dongXe = dongXe;
+		this.soChoNgoi = soChoNgoi;
+	}
+	
 	public Xe(String dongXe, int soChoNgoi, LocalDate ngaySX, int giaSan) {
 		this.dongXe = dongXe;
 		this.soChoNgoi = soChoNgoi;
