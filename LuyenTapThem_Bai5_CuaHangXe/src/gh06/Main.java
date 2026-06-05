@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -30,17 +31,17 @@ public class Main {
 		
 		//Sắp xếp theo chiều giảm dần của giá lăn bánh
 		for (int i = 0; i < ds.size() - 1; i++) {
-		    int min = i;
+		    int max = i;
 
 		    for (int j = i + 1; j < ds.size(); j++) {
-		        if (ds.get(j).tinhGiaBan() < ds.get(min).tinhGiaBan()) {
-		            min = j;
+		        if (ds.get(j).tinhGiaBan() > ds.get(max).tinhGiaBan()) {
+		            max = j;
 		        }
 		    }
 
 		    XeVinfast temp = ds.get(i);
-		    ds.set(i, ds.get(min));
-		    ds.set(min, temp);
+		    ds.set(i, ds.get(max));
+		    ds.set(max, temp);
 		}
 		
 		System.out.println("Danh sách xe sau khi sắp xếp theo chiều giảm dần giá lăn bánh: ");
@@ -48,6 +49,20 @@ public class Main {
 			x.xuat();
 			System.out.println(" - Giá lăn bánh: " + x.tinhGiaLanBanh());
 		}
+		
+		//Thêm 1 xe vào vị trí p
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhập vị trí cần thêm: ");
+		int p = sc.nextInt();
+		if (p < 0 || p > ds.size()) {
+			System.out.println("Vị trí không hợp lệ ! Không thể thêm !!!");
+		}
+		else {
+			XeVinfast xe = new XeVinfast();
+			xe.nhap();
+			ds.add(p, xe);
+		}
+			
 		
 
 	}
