@@ -55,16 +55,17 @@ public class Xe {
 	public void nhap() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("---> NHAP THONG TIN XE: ");
-		System.out.println(" - Nhập dòng xe: ");
+		System.out.print(" - Nhập dòng xe: ");
 		String dx = sc.nextLine();
 		setDongXe(dx);
-		System.out.println(" - Nhập số chỗ ngồi: ");
+		System.out.print(" - Nhập số chỗ ngồi: ");
 		int cn = sc.nextInt();
 		setSoChoNgoi(cn);
-		System.out.println(" - Nhập ngày sản xuất: ");
+		sc.nextLine();
+		System.out.print(" - Nhập ngày sản xuất (yyyy-mm-dd): ");
 		String ngay = sc.nextLine();
 		setNgaySX(LocalDate.parse(ngay));
-		System.out.println(" - Nhập giá sàn: ");
+		System.out.print(" - Nhập giá sàn: ");
 		int gia = sc.nextInt();
 		setGiaSan(gia);
 	}
