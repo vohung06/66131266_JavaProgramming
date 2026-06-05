@@ -74,6 +74,8 @@ public class Main {
 		    }
 		}
 		
+		br.close();
+		fr.close();
 
 	}
 
