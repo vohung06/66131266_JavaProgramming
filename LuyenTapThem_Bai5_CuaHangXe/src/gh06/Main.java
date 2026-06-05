@@ -62,7 +62,17 @@ public class Main {
 			xe.nhap();
 			ds.add(p, xe);
 		}
-			
+		
+		//Xóa tất cả các xe có dòng xe là x
+		System.out.println("Nhập dòng xe cần xóa: ");
+		sc.nextLine();
+		//duyệt ngược để tránh bỏ sót phần tử tiếp theo
+		String xoa = sc.nextLine();
+		for (int i = ds.size() - 1; i >= 0; i--) {
+		    if (ds.get(i).getDongXe().equals(xoa)) {
+		        ds.remove(i);
+		    }
+		}
 		
 
 	}
