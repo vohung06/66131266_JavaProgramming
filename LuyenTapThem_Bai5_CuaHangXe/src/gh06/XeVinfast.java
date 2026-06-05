@@ -3,7 +3,7 @@ package gh06;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class XeVinfast extends Xe {
+public class XeVinfast extends Xe implements Phi {
 	private String noiDK;
 
 	public XeVinfast(String noiDK) {
@@ -41,8 +41,19 @@ public class XeVinfast extends Xe {
 		System.out.println(" - Nơi đăng ký: " + noiDK);
 	}
 	
+	public double tinhPhiTruocBa() {
+		return PHI_TRUOC_BA * tinhGiaBan();
+	}
+	
+	public double tinhPhiDK() {
+		if (noiDK.equals("Hà nội"))
+			return 0.12;
+		else
+			return 0.1;
+	}
+	
 	public double tinhGiaLanBanh() {
-		return 1.0;
+		return tinhGiaBan() + tinhPhiTruocBa() + tinhPhiDK();
 	}
 	
 	
