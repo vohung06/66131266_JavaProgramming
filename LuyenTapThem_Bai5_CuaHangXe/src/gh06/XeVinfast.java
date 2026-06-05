@@ -26,7 +26,7 @@ public class XeVinfast extends Xe {
 		this.noiDK = noiDK;
 	}
 	
-	@Override
+	
 	public void nhap() {
 		super.nhap();
 		Scanner sc = new Scanner(System.in);
@@ -35,12 +35,15 @@ public class XeVinfast extends Xe {
 		setNoiDK(noi);
 	}
 	
-	@Override
+	
 	public void xuat() {
 		super.xuat();
 		System.out.println(" - Nơi đăng ký: " + noiDK);
 	}
 	
+	public double tinhGiaLanBanh() {
+		return 1.0;
+	}
 	
 	
 }

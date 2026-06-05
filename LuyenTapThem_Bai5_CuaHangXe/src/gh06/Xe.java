@@ -84,6 +84,7 @@ public class Xe {
 	}
 	
 	public double tinhGiaBan() {
+		//Period.between(ngaySX, LocalDate.now()).getYears() -> lấy số năm
 		if (ngaySX.plusYears(2).isBefore(LocalDate.now())) {
 			return (double)giaSan * 1.15;
 		}
