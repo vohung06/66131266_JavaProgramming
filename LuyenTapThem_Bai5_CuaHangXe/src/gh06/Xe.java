@@ -81,8 +81,10 @@ public class Xe {
 		if (ngaySX.plusYears(2).isBefore(LocalDate.now())) {
 			return (double)giaSan * 1.15;
 		}
+		else if (ngaySX.plusYears(1).isBefore(LocalDate.now()) || ngaySX.plusYears(1).isEqual(LocalDate.now())) {
+			return (double)giaSan * 1.3;
+		}
 		else
-			return 4.5;
+			return (double)giaSan * 1.5;
 	}
-	
 }
