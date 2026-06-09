@@ -7,6 +7,7 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 2. Làm quen với lập trình hướng đối tượng trên Java.
 3. Tìm hiểu cách nhập/xuất dữ liệu trên Java.
 4. Làm việc với stream và file.
+5. Tạo ứng dụng cơ bản với JavaFX.
 
 ## 🎯 Mục đích
 1. Ghi lại quá trình học Java từ cơ bản đến nâng cao.
