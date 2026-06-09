@@ -32,31 +32,47 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 </p>
 
 <p align="center">
-  <i>Hình 1. Giao diện trang đăng nhập ứng dụng </i>
+  <i>Giao diện trang đăng nhập ứng dụng </i>
 </p>
 
 <p align="center">
     <img src="ImageProject/AppQLTV_2.jpg">
 </p>
 <p align="center">
-  <i>Hình 2. Giao diện trang màn hình chính của ứng dụng </i>
+  <i>Giao diện trang màn hình chính của ứng dụng </i>
 </p>
 
 <p align="center">
     <img src="ImageProject/AppQLTV_4.jpg">
 </p>
 <p align="center">
-  <i>Hình 3. Giao diện trang thêm sách </i>
+  <i>Giao diện trang thêm sách </i>
 </p>
 
 <p align="center">
     <img src="ImageProject/AppQLTV_3.jpg">
 </p>
 <p align="center">
-  <i>Hình 4. Giao diện trang hiển thị danh sách sách </i>
+  <i>Giao diện trang hiển thị danh sách sách </i>
 </p>
 
-### 2. Quản lý danh sách học sinh
+### 2. Ứng dụng quản lý sinh viên cơ bản
+[Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/JavaFX_ViDu3_QuanLySinhVienApp)
+
+**Mô tả**: Ứng dụng quản lý sinh viên cơ bản cho phép người dùng thêm, hiển thị và xoá danh sách sinh viên.
+
+**Lớp chính**: ``Main``
+
+**Trọng tâm kiến thức**: JavaFX
+
+<p align="center">
+    <img src="ImageProject/AppQLSV.jpg">
+</p>
+<p align="center">
+  <i>Giao diện ứng dụng quản lý sinh viên </i>
+</p>
+
+### 3. Quản lý danh sách học sinh
 [Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/OOP_ViDu4_QLHSArrayList)
 
 **Mô tả**: Dự án thực hiện chương trình quản lý danh sách học sinh bằng ArrayList các đối tượng thuộc lớp ```HocSinh```. Cho phép người dùng tạo danh sách học sinh, thêm học sinh mới và xoá học sinh.
@@ -68,7 +84,7 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 ![ảnh 1](ImageProject/QuanLyHocSinh_1.jpg)
 ![ảnh 2](ImageProject/QuanLyHocSinh_2.jpg)
 ![ảnh 3](ImageProject/QuanLyHocSinh_3.jpg)
-### 2. Tính toán phân số
+### 4. Tính toán phân số
 [Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/LuyenTapThem_Bai2_TinhToanPhanSo)
 
 **Mô tả**: Xây dựng lớp ```PhanSo``` để biểu diễn phân số và xử lý các trường hợp đặc biệt. Cho phép người dùng nhập và thực hiện các thao tác tính toán cơ bản trên phân số.
