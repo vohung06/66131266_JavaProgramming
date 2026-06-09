@@ -27,22 +27,31 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 
 **Trọng tâm kiến thức**: OOP, JavaFX, ArrayList.
 
-![ảnh 1](ImageProject/AppQLTV_1.jpg)
+<p align="center">
+    <img src="ImageProject/AppQLTV_1.jpg">
+</p>
+
 <p align="center">
   <i>Hình 1. Giao diện trang đăng nhập ứng dụng </i>
 </p>
 
-![ảnh 2](ImageProject/AppQLTV_2.jpg)
+<p align="center">
+    <img src="ImageProject/AppQLTV_2.jpg">
+</p>
 <p align="center">
   <i>Hình 2. Giao diện trang màn hình chính của ứng dụng </i>
 </p>
 
-![ảnh 4](ImageProject/AppQLTV_4.jpg)
+<p align="center">
+    <img src="ImageProject/AppQLTV_4.jpg">
+</p>
 <p align="center">
   <i>Hình 3. Giao diện trang thêm sách </i>
 </p>
 
-![ảnh 3](ImageProject/AppQLTV_3.jpg)
+<p align="center">
+    <img src="ImageProject/AppQLTV_3.jpg">
+</p>
 <p align="center">
   <i>Hình 4. Giao diện trang hiển thị danh sách sách </i>
 </p>
