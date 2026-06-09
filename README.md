@@ -16,10 +16,41 @@ Kho lưu trữ này chứa toàn bộ các ví dụ và bài tập thực hành 
 4. Làm quen với cấu trúc tổ chức dự án và code.
 
 ## 🚀 Một số dự án tiêu biểu
-### 1. Quản lý danh sách học sinh
+### 1. Ứng dụng quản lý thư viện cơ bản
+[Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/JavaFX_ViDu4_QuanLyThuVienApp)
+
+**Mô tả**: Ứng dụng quản lý thư viên được xây dựng bằng JavaFX nhằm hỗ trợ quản lý thông tin sách trong thư viện. Người dùng có thể đăng nhập vào hệ thống, thêm sách mới, xem danh sách sách hiện có và xoá sách khỏi danh sách.
+
+**Lớp chính**: 
+- **Giao diện**: ```Main```, ```LoginView```, ```HomeView```, ```AddBookView```, ```BookListView```
+- **Lưu dữ liệu**: ```Book```, ```DataStore```
+
+**Trọng tâm kiến thức**: OOP, JavaFX, ArrayList.
+
+![ảnh 1](ImageProject/AppQLTV_1.jpg)
+<p align="center">
+  <i>Hình 1. Giao diện trang đăng nhập ứng dụng </i>
+</p>
+
+![ảnh 2](ImageProject/AppQLTV_2.jpg)
+<p align="center">
+  <i>Hình 2. Giao diện trang màn hình chính của ứng dụng </i>
+</p>
+
+![ảnh 4](ImageProject/AppQLTV_4.jpg)
+<p align="center">
+  <i>Hình 3. Giao diện trang thêm sách </i>
+</p>
+
+![ảnh 3](ImageProject/AppQLTV_3.jpg)
+<p align="center">
+  <i>Hình 4. Giao diện trang hiển thị danh sách sách </i>
+</p>
+
+### 2. Quản lý danh sách học sinh
 [Xem chi tiết dự án](https://github.com/vohung06/66131266_JavaProgramming/tree/main/OOP_ViDu4_QLHSArrayList)
 
-**Mô tả**: Dự án thực hiện chương trình quản lí danh sách học sinh bằng ArrayList các đối tượng thuộc lớp ```HocSinh```. Cho phép người dùng tạo danh sách học sinh, thêm học sinh mới và xoá học sinh.
+**Mô tả**: Dự án thực hiện chương trình quản lý danh sách học sinh bằng ArrayList các đối tượng thuộc lớp ```HocSinh```. Cho phép người dùng tạo danh sách học sinh, thêm học sinh mới và xoá học sinh.
 
 **Lớp chính**: ```HocSinh```, ```Main```.
 
